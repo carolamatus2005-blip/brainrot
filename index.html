@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tendencias Juveniles · 67, Brainrot y Frutinovelas</title>
+  <meta name="description" content="Un recorrido por las tendencias de internet de la Generación Alfa: el 67 (six seven), el brainrot y las frutinovelas.">
+  <meta name="theme-color" content="#C20F3F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a class="nav__logo" href="#inicio" aria-label="Tendencias Juveniles, inicio">
+      <span class="nav__logo-67">67</span> Tendencias Juveniles
+    </a>
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#six-seven">Six Seven</a>
+      <a href="#brainrot">Brainrot</a>
+      <a href="#frutinovelas">Frutinovelas</a>
+      <a href="#antes-despues">Antes / Después</a>
+      <a href="#referencias">Íconos</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO + VIDEO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="wrap hero__inner">
+      <p class="sticker sticker--yellow hero__kicker">📢 ¡BIENVENIDOS, GENERACIÓN ALFA!</p>
+      <h1 class="glitch" data-text="TENDENCIAS JUVENILES">TENDENCIAS JUVENILES</h1>
+      <p class="hero__lead">
+        Del <strong>67</strong> al <strong>brainrot</strong> pasando por las <strong>frutinovelas</strong>:
+        todo lo que tu cerebro ya vio (y no puede olvidar).
+      </p>
+
+      <!-- Reproductor estilo brainrot -->
+      <div class="player" id="player">
+        <div class="player__topbar">
+          <span class="player__dot"></span><span class="player__dot"></span><span class="player__dot"></span>
+          <span class="player__title">📺 BRAINROT TV · EN VIVO</span>
+          <span class="player__live">● LIVE</span>
+        </div>
+
+        <div class="player__screen">
+          <video id="video" class="player__video" playsinline muted loop preload="metadata"
+                 poster="img/despues.jpg"
+                 src="https://pub-ef9c2e3a60cc427d803a21706fb79ab1.r2.dev/tendencias-juveniles.mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+
+          <div class="player__scan" aria-hidden="true"></div>
+
+          <!-- Bienvenida -->
+          <div class="player__welcome" id="welcome">
+            <p class="player__welcome-small">¡HOLA, HOLA, HOLA!</p>
+            <p class="player__welcome-big glitch" data-text="BIENVENIDO">BIENVENIDO</p>
+            <p class="player__welcome-small">al contenido que te pudre el cerebro 🧠</p>
+            <button class="btn btn--big" id="enter" type="button">▶ ENTRAR (con sonido)</button>
+            <button class="btn-link" id="enterMuted" type="button">entrar en silencio 🤫</button>
+          </div>
+
+          <!-- Click para pausar / reproducir -->
+          <button class="player__tap" id="tap" type="button" aria-label="Reproducir o pausar"></button>
+
+          <!-- Subtítulo gigante colorido -->
+          <div class="player__caption" id="caption" aria-hidden="true">SIX SEVEN</div>
+
+          <div class="player__error" id="error" hidden>
+            😵 No se pudo cargar el video.<br>Revisa tu conexión y recarga la página.
+          </div>
+        </div>
+
+        <div class="player__controls" role="group" aria-label="Controles del video">
+          <button class="pbtn" id="play" type="button" aria-label="Reproducir">▶</button>
+          <div class="progress" id="progress" role="slider" tabindex="0"
+               aria-label="Progreso del video" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress__fill" id="progressFill"></div>
+            <div class="progress__knob" id="progressKnob">67</div>
+          </div>
+          <span class="player__time" id="time">0:00</span>
+          <button class="pbtn" id="speed" type="button" aria-label="Cambiar velocidad">1x</button>
+          <button class="pbtn" id="mute" type="button" aria-label="Silenciar">🔇</button>
+          <input class="vol" id="vol" type="range" min="0" max="1" step="0.05" value="1" aria-label="Volumen">
+          <button class="pbtn" id="full" type="button" aria-label="Pantalla completa">⛶</button>
+        </div>
+      </div>
+
+      <div class="hero__stats" aria-hidden="true">
+        <span class="sticker sticker--white">👁 6.7M vistas</span>
+        <span class="sticker sticker--yellow">🔥 100% sin sentido</span>
+        <span class="sticker sticker--white">🧠 cerebro: podrido</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>SIX SEVEN ✋🤚</span><span>COCARDO 🫘</span><span>CALAMARDO HERMOSO ✨</span><span>BRAINROT 🧠</span><span>FRUTINOVELAS 🍓</span><span>67 67 67</span>
+      <span>SIX SEVEN ✋🤚</span><span>COCARDO 🫘</span><span>CALAMARDO HERMOSO ✨</span><span>BRAINROT 🧠</span><span>FRUTINOVELAS 🍓</span><span>67 67 67</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+
+    <!-- ============ TEXTO 1 · 67 ============ -->
+    <section class="section section--yellow" id="six-seven">
+      <div class="wrap">
+        <header class="section__head">
+          <span class="badge">01</span>
+          <h2>67 <small>(six seven)</small></h2>
+          <p class="section__sub">El código numérico que desconcertó a medio mundo</p>
+        </header>
+
+        <article class="card prose">
+          <p class="dropcap">En el vasto universo del lenguaje de internet, pocas expresiones han causado tanta confusión intergeneracional reciente como el término "67", también conocido habitualmente por su pronunciación en inglés, "six seven". Popularizado masivamente por la Generación Alfa a lo largo del año 2025, este aparente código numérico se convirtió en un fenómeno viral que dejó a padres, educadores y adultos rascándose la cabeza mientras inundaba los videos de TikTok y las conversaciones digitales.</p>
+
+          <p>La magnitud de esta tendencia no pasó desapercibida para los estudiosos del lenguaje digital. De hecho, el portal Dictionary.com eligió "67" como la "palabra" del año en 2025, tras registrar que las búsquedas en internet sobre su significado experimentaron un estratosférico aumento del 600%. Este reconocimiento oficial demostró que la jerga digital moderna trasciende las pantallas para establecerse como un componente vital de la cultura contemporánea.</p>
+
+          <aside class="callout">
+            <strong>600%</strong>
+            <span>aumento de las búsquedas sobre el significado de "67" · Palabra del Año 2025 según Dictionary.com</span>
+          </aside>
+
+          <p>Pero, ¿qué significa realmente "six seven"? Su definición es tan escurridiza como fascinante, ya que nadie sabe con exactitud cómo categorizarla. Lejos de ser un número literal, encapsula un estado emocional ambiguo; se utiliza para expresar que alguien se siente "más o menos" bien o mal. No es un meme tradicional de comedia, ni una expresión de pura alegría o tristeza extrema, sino un comodín verbal que los jóvenes emplean tanto en la vida real como en sus redes sociales.</p>
+
+          <p>El origen de esta peculiar expresión está envuelto en el misterio y la especulación, bifurcándose en un par de teorías principales analizadas por los medios internacionales. La primera pista apunta a la industria musical, específicamente al rapero estadounidense Skrilla y su canción titulada "Doot Doot 67". En este tema, la repetición constante de la letra "6-7" haría una referencia directa a la calle 67 de Chicago, el lugar de residencia del artista antes de alcanzar la fama.</p>
+
+          <p>Por otro lado, medios de prestigio han sugerido una génesis diferente ligada al mundo del deporte universitario estadounidense. Según esta segunda versión, el jugador de baloncesto Taylen Kinney comenzó a usar la frase "six seven" durante sus entrevistas de manera casual, acompañándola siempre de un peculiar gesto con las manos. Esta actitud desenfadada frente a las cámaras habría sido el catalizador perfecto para que la audiencia adolescente lo adoptara y lo transformara en un fenómeno propio.</p>
+
+          <p>Independientemente de cuál fue la chispa inicial exacta, la propagación del meme "67" siguió las reglas clásicas de la viralidad moderna por pura inercia algorítmica. Tras volverse popular, comenzaron a surgir millones de videos en TikTok con jóvenes, incluyendo un famoso clip de un adolescente rubio, gritando el número frente a la cámara. Es una dinámica de contagio social típica, donde lo ves, lo copias y pronto la comunidad entera lo repite sin recordar dónde empezó.</p>
+
+          <p>En definitiva, el fenómeno del "67" actúa como un diccionario emocional en tiempo real para una generación hiperconectada. Aunque para las generaciones mayores esto pueda generar la sensación de estar leyendo un "archivo corrupto" en la comunicación moderna, para los más jóvenes es un símbolo de pertenencia y una herramienta válida para navegar los complejos matices grises de sus emociones cotidianas.</p>
+        </article>
+
+        <!-- Mini juego six seven -->
+        <div class="sixseven" id="sixseven">
+          <p class="sixseven__label">Hazlo tú mismo: toca el botón y haz el gesto ✋🤚</p>
+          <button class="sixseven__btn" id="sixsevenBtn" type="button" aria-live="polite">
+            <span id="sixsevenWord">SIX</span>
+          </button>
+          <p class="sixseven__count">Llevas <strong id="sixsevenCount">0</strong> six sevens</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEXTO 2 · BRAINROT ============ -->
+    <section class="section section--red" id="brainrot">
+      <div class="wrap">
+        <header class="section__head">
+          <span class="badge badge--yellow">02</span>
+          <h2>Brainrot</h2>
+          <p class="section__sub">Palabra del Año Oxford 2024 · "pudrición cerebral"</p>
+        </header>
+
+        <article class="card prose">
+          <p class="dropcap">Si el "67" define una emoción de internet, el término "brainrot" (traducido literalmente como "pudrición cerebral") describe el estado general de la mente humana tras horas de exposición al contenido digital contemporáneo. Elegida como la Palabra del Año por Oxford en 2024, esta expresión de la jerga de internet pasó de ser una mera queja a un diagnóstico cultural oficial sobre cómo consumimos información.</p>
+
+          <p>El "brainrot" se refiere específicamente a esa niebla mental, fatiga y aturdimiento que surge tras consumir contenido online caótico, hiperestimulante y profundamente absurdo. Este tipo de entretenimiento rápido y repetitivo domina las pantallas de plataformas como TikTok, Roblox y YouTube Shorts, dirigiendo su caos visual y sonoro principalmente a los miembros de la Generación Alfa y la Generación Z.</p>
+
+          <p>Los orígenes de esta tendencia se cimentaron en la cultura de internet que emergió fuertemente en la década de 2020. Con una demanda de contenido disparada y una capacidad de atención cada vez más fragmentada, los creadores comenzaron a superponer múltiples estímulos simultáneos. Un video típico de esta era podía mostrar un fragmento de una película mientras en la mitad inferior de la pantalla se jugaba una partida de videojuegos móviles o se cortaba arena cinética para mantener los ojos fijos en la pantalla.</p>
+
+          <p>El verdadero motor del "brainrot", sin embargo, ha sido el algoritmo de recomendación de formato corto. Diseñado para maximizar el tiempo de retención absoluto, el algoritmo recompensa lo estrafalario, lo rápido y lo ruidoso. En esta carrera por la atención, la narrativa tradicional fue sacrificada en favor de estímulos visuales agresivos de microsegundos, forzando la producción de videos que parecen más una sobrecarga sensorial que una pieza de entretenimiento.</p>
+
+          <aside class="callout callout--dark">
+            <strong>2024</strong>
+            <span>el año en que Oxford coronó al "brainrot" como Palabra del Año</span>
+          </aside>
+
+          <p>Un claro ejemplo de los pilares del contenido "brainrot" son los fenómenos absurdos generados en la red que se vuelven virales de la noche a la mañana, como animaciones de cabezas cantando dentro de inodoros o bailes sin contexto hiper-acelerados. Estas creaciones bizarras evolucionan hasta convertirse en universos complejos que acaparan miles de millones de visitas, dejando a los padres desconcertados y a las audiencias más jóvenes completamente hipnotizadas.</p>
+
+          <p>A nivel psicológico, los usuarios utilizan el término "brainrot" con una enorme dosis de autoconciencia y humor autodespreciativo. No es simplemente una crítica lanzada por adultos alarmados, sino que los propios jóvenes admiten sentir que sus cerebros "se pudren" al volverse momentáneamente incapaces de procesar información de formato largo o lento. Es un reconocimiento irónico de su propia sobreestimulación digital.</p>
+
+          <p>En última instancia, el concepto de "brainrot" trasciende la simple queja sobre el tiempo de pantalla para convertirse en un sello de identidad. Aunque el término evoca un panorama donde la capacidad de concentración está comprometida, también refleja la forma resiliente en que los nativos digitales procesan y satirizan el abrumador entorno de información infinita en el que les ha tocado desenvolverse todos los días.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ TEXTO 3 · FRUTINOVELAS ============ -->
+    <section class="section section--crimson" id="frutinovelas">
+      <div class="wrap">
+        <header class="section__head">
+          <span class="badge badge--yellow">03</span>
+          <h2>Frutinovelas</h2>
+          <p class="section__sub">Melodrama latino, pero con fresas y arándanos 🍓🫐</p>
+        </header>
+
+        <article class="card prose">
+          <p class="dropcap">Mientras el "brainrot" representa el caos vertiginoso de internet, las llamadas "frutinovelas" impulsadas por Inteligencia Artificial se erigen como una de las manifestaciones virales más creativas, absurdas y cautivadoras de las redes sociales recientes. Estos formatos, que se han convertido en uno de los fenómenos más llamativos de plataformas como TikTok e Instagram, mezclan el clásico melodrama con protagonistas poco convencionales: frutas y verduras humanizadas.</p>
+
+          <p>Las frutinovelas son esencialmente micro-dramas o miniseries de episodios muy cortos, generadas casi en su totalidad utilizando diversas herramientas de Inteligencia Artificial. En estas surrealistas historias de ficción, los espectadores pueden presenciar cómo una fresa desconsolada descubre la infidelidad de su novio arándano con un vegetal rival. Es una fusión perfecta entre el viejo formato de la telenovela latinoamericana y el potencial de las herramientas generativas modernas.</p>
+
+          <p>El proceso creativo de estos videos virales suele comenzar con la escritura del guion, donde la exageración emocional es indispensable. Los creadores acuden a chatbots como Gemini, ChatGPT o Perplexity para solicitar diálogos llenos de drama y traiciones inverosímiles. Se le instruye a la IA para que redacte interacciones de apenas unos 30 segundos, asegurando que cada frase aporte un giro inesperado que atrape al espectador al instante.</p>
+
+          <p>Una vez estructurada la trama, el diseño de personajes cobra vida a través de motores de generación de imágenes como Midjourney o NanoBanana 2. Los directores de estas series no se conforman con simples fotografías de internet, sino que buscan dotar a las frutas de personalidad propia, pidiendo a la IA texturas hiperrealistas combinadas con accesorios ridículos, como pestañas largas, pelucas o corbatas elegantes que acentúen el humor de la escena.</p>
+
+          <p>El paso técnico que realmente consolida la magia de estas obras es la sincronización y animación facial. Utilizando aplicaciones y plataformas especializadas en video como HeyGen, D-ID o LalaMu, los creadores logran que las imágenes estáticas de los alimentos muevan la boca y parpadeen al ritmo exacto de los diálogos. Este efecto deliberadamente artificial, a veces con un estilo "low-cost", suma una capa indispensable de comedia visual que encanta a la audiencia.</p>
+
+          <p>El diseño sonoro se convierte en el golpe de gracia para elevar la tensión de la frutinovela. Los guiones son interpretados por sofisticados sistemas de texto a voz (como ElevenLabs), capaces de inyectar emociones crudas como gritos, llantos o susurros dramáticos. A esto se le suma una banda sonora generada artificialmente o extraída de bibliotecas libres que evoca directamente a la intensa musicalización de la televisión dramática de la década de 1990.</p>
+
+          <p>En su montaje final mediante editores como CapCut, donde se añaden enormes subtítulos coloridos y zooms vertiginosos, las frutinovelas logran diferenciarse de otras tendencias. A diferencia del contenido hiperrealista pero carente de alma (conocido en redes como "AI Slop") que solo busca clics vacíos, las frutinovelas abrazan abiertamente la imperfección y el error visual como un recurso cómico que termina forjando una genuina comunidad de seguidores.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ANTES / DESPUÉS ============ -->
+    <section class="section section--yellow" id="antes-despues">
+      <div class="wrap">
+        <header class="section__head">
+          <span class="badge">VS</span>
+          <h2>Antes <small>/</small> Después</h2>
+          <p class="section__sub">El mismo parque, antes y después del brainrot. Arrastra la línea ↔</p>
+        </header>
+
+        <div class="compare" id="compare" style="--pos:50%">
+          <img class="compare__img" src="img/antes.jpg" alt="Antes: niños jugando en un parque, en los columpios, el tobogán y la red de escalada." draggable="false">
+
+          <div class="compare__after">
+            <img class="compare__img" src="img/despues.jpg" alt="Después: el mismo parque invadido por personajes brainrot, disfraces de fruta, el número 67 y un gigante mirando su celular." draggable="false">
+          </div>
+
+          <span class="compare__tag compare__tag--left">ANTES</span>
+          <span class="compare__tag compare__tag--right">DESPUÉS</span>
+
+          <div class="compare__line" aria-hidden="true">
+            <span class="compare__handle">◀ 67 ▶</span>
+          </div>
+
+          <input class="compare__range" id="compareRange" type="range" min="0" max="100" value="50"
+                 aria-label="Comparar antes y después: mueve el control para ver cada imagen">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REFERENCIAS ============ -->
+    <section class="section section--red" id="referencias">
+      <div class="wrap">
+        <header class="section__head">
+          <span class="badge badge--yellow">★</span>
+          <h2>Los íconos del sitio</h2>
+          <p class="section__sub">Tres nombres que no pueden faltar</p>
+        </header>
+
+        <div class="refs">
+          <!--
+            Para poner una imagen propia en una tarjeta, reemplaza el contenido de .ref__art por:
+            <img src="img/tu-imagen.jpg" alt="descripción">
+          -->
+
+          <article class="ref ref--67">
+            <div class="ref__art" aria-hidden="true"><span>6</span><span>7</span></div>
+            <h3>Six Seven</h3>
+            <p>El comodín verbal de la Generación Alfa: ni bien ni mal, más o menos. Se dice, se grita y se hace con las manos, una arriba y otra abajo.</p>
+            <button class="btn btn--small" type="button" data-shake>¡Six seven! ✋🤚</button>
+          </article>
+
+          <article class="ref ref--coco">
+            <div class="ref__art" aria-hidden="true"><span class="ref__word">CoCardo</span></div>
+            <h3>CoCardo</h3>
+            <p>El invitado de honor de la casa. Aparece sin avisar, no explica nada y se queda en la memoria igual que el resto del universo brainrot.</p>
+            <button class="btn btn--small" type="button" data-shake>Invocar a CoCardo 🫘</button>
+          </article>
+
+          <article class="ref ref--calamardo">
+            <div class="ref__art" aria-hidden="true"><span class="ref__word">✨ Hermoso ✨</span></div>
+            <h3>Calamardo Hermoso</h3>
+            <p>La escena clásica de Bob Esponja convertida en meme eterno: cuando alguien se ve demasiado bien, el internet entero responde con él.</p>
+            <button class="btn btn--small" type="button" data-shake>Modo hermoso ✨</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__big glitch" data-text="SIX SEVEN">SIX SEVEN</p>
+    <p>Tendencias Juveniles · 67 · Brainrot · Frutinovelas</p>
+    <p class="footer__small">Hecho con el cerebro (un poco) podrido 🧠</p>
+  </footer>
+
+  <!-- Confeti / efectos -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
